@@ -1,12 +1,12 @@
 const userMutations = {
-    createUser: (args: any) => {
+    createUser: (_: any, args: any) => {
         console.log('create user');
-        console.log({args});
+        console.log(args);
     },
-    updateUser: (args: any) => {
+    updateUser: (_: any, args: any) => {
         console.log('update user');
-        console.log({args});
+        console.log(args);
     }
-}
+};
 
 export default userMutations;
