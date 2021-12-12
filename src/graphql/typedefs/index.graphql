@@ -1,0 +1,22 @@
+# Custom Scalars
+scalar Date
+
+type Query {
+    # Users
+    users: [User]!
+    user(id: ID!): User
+
+    # Posts
+    posts: [Post]!
+    post(id: ID!): Post
+}
+
+type Mutation {
+    # Users
+    createUser(user: UserCreateInput): User!
+    updateUser(user: UserUpdateInput): User!
+
+    # Posts
+    createPost(post: PostCreateInput): Post!
+    updatePost(post: PostUpdateInput): Post!
+}
