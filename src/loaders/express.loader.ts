@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import config from '../config';
+import {graphqlHTTP} from "express-graphql";
+import schema from "../graphql/schema";
 
 export default ({app}: { app: express.Application }) => {
     /**
@@ -36,6 +38,8 @@ export default ({app}: { app: express.Application }) => {
 
     // Middleware to read cookies for the httponly token
     app.use(cookieParser());
+
+    app.use('/graphql', graphqlHTTP({schema, graphiql: true}));
 
     // catch 404 and forward to error handler
     app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
