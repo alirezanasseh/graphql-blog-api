@@ -1,0 +1,22 @@
+# Types
+type Post implements Timestamps {
+    id: ID!
+    title: String!
+    body: String!
+    author: User!
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+# Inputs
+input PostCreateInput {
+    title: String!
+    body: String!
+    author: ID!
+}
+
+input PostUpdateInput {
+    title: String
+    body: String
+    author: ID
+}
