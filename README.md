@@ -1,8 +1,8 @@
-#Blog API project
+# Blog API project
 This project is for learning and using some new technologies I've just learnt.
-##API
+## API
 GraphQL
-##Database
+## Database
 PostgreSQL
-##ORM
+## ORM
 TypeORM
