@@ -1,11 +1,11 @@
 import {Application} from 'express';
 import expressLoader from './express.loader';
+import typeORMLoader from "./typeorm.loader";
 
 export default async ({expressApp}: {expressApp: Application}) => {
     try {
-        const server = await expressLoader({app: expressApp});
-
-        return server;
+        await typeORMLoader();
+        return await expressLoader({app: expressApp});
     } catch (e) {
         console.log(e);
         throw e;
