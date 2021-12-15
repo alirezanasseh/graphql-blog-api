@@ -17,7 +17,6 @@ if (envFound.error) {
 
 const config = {
     port: parseInt(process.env.PORT || '8000', 10),
-    databaseURL: process.env.MONGO_URI,
     jwtSecret: RSA_PRIVATE_KEY,
     nodeEnv: process.env.NODE_ENV,
     origins: process.env.ORIGINS,
